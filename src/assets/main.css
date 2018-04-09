@@ -1,0 +1,135 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font: 14px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1.4em;
+  background: #f5f5f5;
+  color: #4d4d4d;
+  margin: 0 auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  font-weight: 100;
+  min-width: 230px;
+  max-width: 550px;
+}
+
+h1 {
+  width: 100%;
+  font-size: 80px;
+  font-weight: 100;
+  text-align: center;
+  color: rgba(24, 24, 24, 0.911);
+  -webkit-text-rendering: optimizeLegibility;
+  -moz-text-rendering: optimizeLegibility;
+  text-rendering: optimizeLegibility;
+}
+
+button,
+input {
+  outline: none;
+}
+
+.hidden {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  body {
+    max-width: auto;
+  }
+}
+
+.todos {
+  margin: 0;
+  list-style-type: none;
+  padding: 0 20px;
+  border-top: 1px solid #ccc;
+  background: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0 10px 30px #ccc;
+  position: relative;
+  transiton: 0.3s;
+}
+li {
+  cursor: pointer;
+  font-size: 24px;
+  line-height: 36px;
+  padding: 12px 0;
+  border-bottom: 1px solid #ededed;
+  position: relative;
+}
+li:last-child {
+  border-bottom: none;
+}
+li:first-child > input {
+  font-size: 24px;
+  padding: 10px;
+  border: none;
+  width: 100%;
+  background: transparent;
+}
+li > input[type="checkbox"] {
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 4px;
+  bottom: 0;
+  margin: auto 0;
+  border: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+li > input[type="checkbox"] {
+  border: 1px solid rgba(80, 77, 77, 0.295);
+}
+time {
+  position: absolute;
+  right: 60px;
+  top: 15px;
+  font-size: 9pt;
+}
+label {
+  display: block;
+  vertical-align: middle;
+  padding-left: 50px;
+  letter-spacing: 2;
+}
+button {
+  position: absolute;
+  right: 5px;
+  top: 15px;
+  height: 30px;
+  width: 30px;
+  border: none;
+  background: none;
+  display: none;
+}
+button::after,
+button::before {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 0;
+  transform: rotateZ(45deg);
+  height: 1px;
+  width: 30px;
+  background: #cc9a9a;
+}
+button::before {
+  transform: rotateZ(-45deg);
+}
+li:hover > button {
+  display: block;
+}
+li.checked > label {
+  color: #d9d9d9;
+  text-decoration: line-through;
+}
